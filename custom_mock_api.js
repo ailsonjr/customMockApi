@@ -1425,6 +1425,20 @@ async function custom_mock_apis(params) {
       'api_gerar_prospect': responses.api_gerar_prospect[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[400].PossuiPropostaAberturaContaEmAndamento,
       'api_consultar_propostas': { ...responses.api_consultar_propostas[200].AberturaConta.Cancelada, ...responses.api_consultar_propostas[200].AberturaConta.Cancelada.body.response.push(responses.api_consultar_propostas[200].AberturaConta.EmAndamento.body.response[0]) }
+    },
+    '96644214053': {
+      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
+      'api_atualizar_enderecos': responses.api_atualizar_enderecos[400],
+      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
+      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_midias': responses.api_midias[200],
+      'api_palavra_chave': responses.api_palavra_chave[200],
+      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
+      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
+      'api_proposta_credito': responses.api_proposta_credito[200],
+      'api_validar_midias': responses.api_validar_midias[200],
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
     }
   }
 
