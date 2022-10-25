@@ -148,19 +148,15 @@ async function custom_mock_apis(params) {
     "api_atualizar_enderecos": {
       "400": {
         "body": {
-          "body": {
-            "statusCode": 400,
-            "key": "ProspectNaoEncontrada"
-          }
+          "statusCode": 400,
+          "key": "ProspectNaoEncontrada"
         }
       },
       "200": {
         "body": {
-          "body": {
-            "response": "Informações de endereço atualizadas com sucesso."
-          },
-          "statusCode": 200
-        }
+          "response": "Informações de endereço atualizadas com sucesso."
+        },
+        "statusCode": 200
       },
       "code": 200
     },
