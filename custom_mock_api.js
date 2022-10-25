@@ -4,6 +4,22 @@ async function custom_mock_apis(params) {
   let result;
 
   const responses = {
+    "api_cancelar_prospect":{
+      "200":{
+          "code":200,
+          "body":{
+              "statusCode": 200,
+              "response": "Prospect cancelado"
+          }
+      },
+      "500":{
+          "code":500,
+          "body":{
+              "statusCode": 500,
+              "message": "Não foi possível executar a função Cancelar Prospect"
+          }
+      }
+    },
     "api_tipo_documento": {
       "200": {
         "code": 200,
@@ -1435,7 +1451,13 @@ async function custom_mock_apis(params) {
       'api_proposta_credito': responses.api_proposta_credito[200],
       'api_validar_midias': responses.api_validar_midias[200],
       'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-    }
+    },
+    '02377396070': {
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
+      'api_cancelar_prospect': responses.api_cancelar_prospect[200],
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
+    },
   }
 
   if (responseCpfs.hasOwnProperty(input.trim())) {
