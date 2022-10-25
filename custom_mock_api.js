@@ -4,20 +4,20 @@ async function custom_mock_apis(params) {
   let result;
 
   const responses = {
-    "api_cancelar_prospect":{
-      "200":{
-          "code":200,
-          "body":{
-              "statusCode": 200,
-              "response": "Prospect cancelado"
-          }
+    "api_cancelar_prospect": {
+      "200": {
+        "code": 200,
+        "body": {
+          "statusCode": 200,
+          "response": "Prospect cancelado"
+        }
       },
-      "500":{
-          "code":500,
-          "body":{
-              "statusCode": 500,
-              "message": "Não foi possível executar a função Cancelar Prospect"
-          }
+      "500": {
+        "code": 500,
+        "body": {
+          "statusCode": 500,
+          "message": "Não foi possível executar a função Cancelar Prospect"
+        }
       }
     },
     "api_tipo_documento": {
@@ -99,7 +99,7 @@ async function custom_mock_apis(params) {
       "400": {},
       "code": 200
     },
-    "api_validar_midias": {
+    "api_validar_midia": {
       "200": {
         "body": {
           "statusCode": 200,
@@ -170,11 +170,10 @@ async function custom_mock_apis(params) {
       },
       "200": {
         "body": {
-          "response": "Informações de endereço atualizadas com sucesso."
+          "response": "Informações de endereço atualizadas com sucesso.",
+          "statusCode": 200
         },
-        "statusCode": 200
-      },
-      "code": 200
+      }
     },
     "api_buscaCliente": {
       "200": {
@@ -1287,7 +1286,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midias': responses.api_validar_midias[200]
+      'api_validar_midia': responses.api_validar_midia[200]
     },
     '95580658036': {
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[400],
@@ -1300,7 +1299,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midias': responses.api_validar_midias[200]
+      'api_validar_midia': responses.api_validar_midia[200]
     },
     '32073821006': {
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
@@ -1313,7 +1312,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[400],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midias': responses.api_validar_midias[200]
+      'api_validar_midia': responses.api_validar_midia[200]
     },
     '94603715072': {
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[400],
@@ -1326,7 +1325,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[400],
-      'api_validar_midias': responses.api_validar_midias[200]
+      'api_validar_midia': responses.api_validar_midia[200]
     },
     '78448642066': {
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
@@ -1339,7 +1338,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midias': responses.api_validar_midias[200]
+      'api_validar_midia': responses.api_validar_midia[200]
     },
     '06647421068': {
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
@@ -1352,7 +1351,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midias': responses.api_validar_midias[200]
+      'api_validar_midia': responses.api_validar_midia[200]
     },
     '79377920000': {
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
@@ -1365,7 +1364,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midias': responses.api_validar_midias[200]
+      'api_validar_midia': responses.api_validar_midia[200]
     },
     '56124595052': {
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
@@ -1378,7 +1377,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midias': responses.api_validar_midias[400].tamanho
+      'api_validar_midia': responses.api_validar_midia[400].tamanho
     },
     '01612274064': {
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
@@ -1391,7 +1390,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midias': responses.api_validar_midias[400].tempo
+      'api_validar_midia': responses.api_validar_midia[400].tempo
     },
     '30418932077': {
       'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
@@ -1430,7 +1429,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midias': responses.api_validar_midias[200],
+      'api_validar_midia': responses.api_validar_midia[200],
       'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
     },
     '07253602080': {
@@ -1449,7 +1448,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midias': responses.api_validar_midias[200],
+      'api_validar_midia': responses.api_validar_midia[200],
       'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
     },
     '02377396070': {
@@ -1457,7 +1456,7 @@ async function custom_mock_apis(params) {
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_cancelar_prospect': responses.api_cancelar_prospect[200],
       'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-    },
+    }
   }
 
   if (responseCpfs.hasOwnProperty(input.trim())) {
