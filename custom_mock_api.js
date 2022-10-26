@@ -111,23 +111,67 @@ async function custom_mock_apis(params) {
       },
       "400": {
         "tamanho": {
-          "body": {
-            "statusCode": 400,
-            "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/videos-bot-mel/Video_1_MEL_CAMERA_NEW_v2.mp4",
-            "tipoMidia": "video/mp4",
-            "tamanhoMidia": "10.9 MB",
-            "tempoMidia": "7.9 segundos",
-            "key": "tamanhoLimiteExcedido",
+          "video": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/videos-bot-mel/Video_1_MEL_CAMERA_NEW_v2.mp4",
+              "tipoMidia": "video/mp4",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
+          },
+          "pdf": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/PDF-bot-mel/%5BDESCONTINUADO%5D+MB_CartilhaMel_Conta+Corrente.pdf",
+              "tipoMidia": "pdf",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
+          },
+          "imagem": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/imagens-bot-mel/MB_Mel_Orientacoes-Copia-de-Contrato_2021_1080x1080px-Final.jpg",
+              "tipoMidia": "image/jpg",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
           }
         },
         "tempo": {
-          "body": {
-            "statusCode": 400,
-            "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/videos-bot-mel/Video_1_MEL_CAMERA_NEW_v2.mp4",
-            "tipoMidia": "video/mp4",
-            "tamanhoMidia": "4.9 MB",
-            "tempoMidia": "3.9 segundos",
-            "key": "tempoLimiteMinimo"
+          "video": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/videos-bot-mel/Video_1_MEL_CAMERA_NEW_v2.mp4",
+              "tipoMidia": "video/mp4",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
+          },
+          "pdf": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/PDF-bot-mel/%5BDESCONTINUADO%5D+MB_CartilhaMel_Conta+Corrente.pdf",
+              "tipoMidia": "pdf",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
+          },
+          "imagem": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/imagens-bot-mel/MB_Mel_Orientacoes-Copia-de-Contrato_2021_1080x1080px-Final.jpg",
+              "tipoMidia": "image/jpg",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
           }
         }
       }
@@ -1394,7 +1438,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[400].tamanho
+      'api_validar_midia': responses.api_validar_midia[400].tamanho.video
     },
     '01612274064': {
       'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
@@ -1408,7 +1452,7 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[400].tempo
+      'api_validar_midia': responses.api_validar_midia[400].tempo.video
     },
     '30418932077': {
       'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
@@ -1524,6 +1568,62 @@ async function custom_mock_apis(params) {
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[400],
       'api_validar_midia': responses.api_validar_midia[200]
+    },
+    '32128064007': {
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
+      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
+      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
+      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
+      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_midias': responses.api_midias[200],
+      'api_palavra_chave': responses.api_palavra_chave[200],
+      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
+      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
+      'api_proposta_credito': responses.api_proposta_credito[200],
+      'api_validar_midia': responses.api_validar_midia[400].tempo.imagem
+    },
+    '22242962078': {
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
+      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
+      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
+      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
+      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_midias': responses.api_midias[200],
+      'api_palavra_chave': responses.api_palavra_chave[200],
+      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
+      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
+      'api_proposta_credito': responses.api_proposta_credito[200],
+      'api_validar_midia': responses.api_validar_midia[400].tempo.pdf
+    },
+    '35016643032': {
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
+      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
+      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
+      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
+      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_midias': responses.api_midias[200],
+      'api_palavra_chave': responses.api_palavra_chave[200],
+      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
+      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
+      'api_proposta_credito': responses.api_proposta_credito[200],
+      'api_validar_midia': responses.api_validar_midia[400].tamanho.imagem
+    },
+    '61400381037': {
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
+      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
+      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
+      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
+      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_midias': responses.api_midias[200],
+      'api_palavra_chave': responses.api_palavra_chave[200],
+      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
+      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
+      'api_proposta_credito': responses.api_proposta_credito[200],
+      'api_validar_midia': responses.api_validar_midia[400].tamanho.pdf
     }
   }
 
