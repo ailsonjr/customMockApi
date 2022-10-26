@@ -1438,7 +1438,10 @@ async function custom_mock_apis(params) {
       'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[400].tamanho.video
+      'api_validar_midia': {
+        "200": responses.api_validar_midia[200],
+        "400": responses.api_validar_midia[400].tamanho.video
+      }
     },
     '01612274064': {
       'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
