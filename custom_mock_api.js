@@ -1441,7 +1441,7 @@ async function custom_mock_apis(params) {
       'api_consultar_propostas': responses.api_consultar_propostas[200].CreditoPessoal.EmAndamento.ContaDigital,
     },
     '20296170089': {
-      'api_buscaCliente': responses.api_buscaCliente[200],
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
       'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
       'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
@@ -1456,13 +1456,13 @@ async function custom_mock_apis(params) {
       'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
     },
     '07253602080': {
-      'api_buscaCliente': responses.api_buscaCliente[200],
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
       'api_gerar_prospect': responses.api_gerar_prospect[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[400].PossuiPropostaAberturaContaEmAndamento,
       'api_consultar_propostas': { ...responses.api_consultar_propostas[200].AberturaConta.Cancelada, ...responses.api_consultar_propostas[200].AberturaConta.Cancelada.body.response.push(responses.api_consultar_propostas[200].AberturaConta.EmAndamento.body.response[0]) }
     },
     '96644214053': {
-      'api_buscaCliente': responses.api_buscaCliente[200],
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
       'api_atualizar_enderecos': responses.api_atualizar_enderecos[400],
       'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
@@ -1477,14 +1477,14 @@ async function custom_mock_apis(params) {
       'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
     },
     '02377396070': {
-      'api_buscaCliente': responses.api_buscaCliente[200],
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
       'api_gerar_prospect': responses.api_gerar_prospect[200],
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_cancelar_prospect': responses.api_cancelar_prospect[200],
       'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
     },
     '51523051000': {
-      'api_buscaCliente': responses.api_buscaCliente[200],
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
       'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
       'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
@@ -1498,7 +1498,7 @@ async function custom_mock_apis(params) {
       'api_validar_midia': responses.api_validar_midia[200]
     },
     '92233604040': {
-      'api_buscaCliente': responses.api_buscaCliente[200],
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[400],
       'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
       'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
@@ -1512,7 +1512,7 @@ async function custom_mock_apis(params) {
       'api_validar_midia': responses.api_validar_midia[200]
     },
     '58087823095': {
-      'api_buscaCliente': responses.api_buscaCliente[200],
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
       'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
       'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
       'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
