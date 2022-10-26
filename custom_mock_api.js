@@ -765,6 +765,13 @@ async function custom_mock_apis(params) {
         },
         "code": 400
 
+      },
+      "500": {
+        "code": 500,
+        "body": {
+          "statusCode": 500,
+          "message": "Não foi possível executar a função Pesquisar Localidade"
+        }
       }
     },
     "api_consulta_status_proposta_FGTS": {
