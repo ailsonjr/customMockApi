@@ -1945,8 +1945,53 @@ async function custom_mock_apis(params) {
     },
     '42518511024': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].ComunicacaoNaoEncontrada,
+      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao
+    },
+    '42782806025':{
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[200],
+      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao,
       'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_simulacaoRenovacao': responses.api_simulacaoRenovacao[400]
+      'api_obter_token_IN100': responses.api_obter_token_IN100[200],
+      'api_simulacaoRenovacao': responses.api_simulacaoRenovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
+    },
+    '40234917059':{
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[200],
+      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_obter_token_IN100': responses.api_obter_token_IN100[200],
+      'api_simulacaoRenovacao': responses.api_simulacaoRenovacao[200],
+      'api_simulacaoRenovacao2': responses.api_simulacaoRenovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
+    },
+    '55350900005':{
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[200],
+      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_obter_token_IN100': responses.api_obter_token_IN100[200],
+      'api_simulacaoRenovacao': responses.api_simulacaoRenovacao[200],
+      'api_simulacaoRenovacao2': responses.api_simulacaoRenovacao[200],
+      'api_simulacaoRenovacao3': responses.api_simulacaoRenovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
+    },
+    '33329623020':{
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[200],
+      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_obter_token_IN100': responses.api_obter_token_IN100[400],
+      'api_simulacaoRenovacao3': responses.api_simulacaoRenovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
+    },
+    '88970134069':{
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[200],
+      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_obter_token_IN100': responses.api_obter_token_IN100[400],
+      'api_simulacaoRenovacao3': responses.api_simulacaoRenovacao[200],
+      'api_consultar_IN100': responses.api_consultar_IN100[200],
+      'api_simulacaoRenovacao2': responses.api_simulacaoRenovacao[400].ClienteNaoPossuiContratoMinimoQuitacao
     }
   }
 
@@ -1962,3 +2007,5 @@ async function custom_mock_apis(params) {
     result
   }
 }
+
+module.exports = custom_mock_apis
