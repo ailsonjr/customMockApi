@@ -222,61 +222,245 @@ async function custom_mock_apis(params) {
     "api_buscaCliente": {
       "200": {
         "cliente": {
-          "body": {
+          "beneficiario": {
             "body": {
-              "cpf": input,
-              "nome": "Amadeu Marcio Correia Barroso",
-              "sexo": "Masculino",
-              "menus": [
-                {
-                  "nome": "Empréstimo FGTS",
-                  "codigo": 1,
-                  "habilitado": true
-                },
-                {
-                  "nome": "Empréstimo Crédito Pessoal Abertura de Contas",
-                  "codigo": 2,
-                  "habilitado": true
-                },
-                {
-                  "nome": "Renovação de Empréstimo Consignado",
-                  "codigo": 3,
-                  "habilitado": true
-                },
-                {
-                  "nome": "Empréstimo Saque Cartão Consignado",
-                  "codigo": 4,
-                  "habilitado": false
-                },
-                {
-                  "nome": "Empréstimo Pessoal",
-                  "codigo": 5,
-                  "habilitado": false
-                },
-                {
-                  "nome": "Empréstimo Consignado",
-                  "codigo": 6,
-                  "habilitado": true
-                }
-              ],
-              "nomeMae": "Lea Maria Cancado Lemos",
-              "clienteMB": true,
-              "beneficios": [],
-              "correntista": false,
-              "beneficiario": true,
-              "qtdBeneficios": 0,
-              "dataNascimento": "05/02/1981",
-              "telefoneValido": false,
-              "pessoaVulneravel": false,
-              "numeroReferencial": 3721968,
-              "possuiDataPrevista": false,
-              "telefoneQualificado": null,
-              "listaBeneficiosFiltrada": "",
-              "indicadorPossuiPropostaCP": false
+              "body": {
+                "cpf": input,
+                "nome": "Steve Jobs",
+                "sexo": "Masculino",
+                "menus": [
+                  {
+                    "nome": "Empréstimo FGTS",
+                    "codigo": 1,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Empréstimo Crédito Pessoal Abertura de Contas",
+                    "codigo": 2,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Renovação de Empréstimo Consignado",
+                    "codigo": 3,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Empréstimo Saque Cartão Consignado",
+                    "codigo": 4,
+                    "habilitado": false
+                  },
+                  {
+                    "nome": "Empréstimo Pessoal",
+                    "codigo": 5,
+                    "habilitado": false
+                  },
+                  {
+                    "nome": "Empréstimo Consignado",
+                    "codigo": 6,
+                    "habilitado": true
+                  }
+                ],
+                "nomeMae": "Lea Maria Cancado Lemos",
+                "clienteMB": true,
+                "beneficios": [],
+                "correntista": false,
+                "beneficiario": true,
+                "qtdBeneficios": 0,
+                "dataNascimento": "05/02/1981",
+                "telefoneValido": true,
+                "pessoaVulneravel": false,
+                "numeroReferencial": 3721968,
+                "possuiDataPrevista": false,
+                "telefoneQualificado": null,
+                "listaBeneficiosFiltrada": "",
+                "indicadorPossuiPropostaCP": true
+              },
+              "statusCode": 200
             },
-            "statusCode": 200
+            "code": 200
           },
-          "code": 200
+          "correntistaBeneficiario": {
+            "body": {
+              "body": {
+                "cpf": input,
+                "nome": "Steve Jobs",
+                "sexo": "Masculino",
+                "menus": [
+                  {
+                    "nome": "Empréstimo FGTS",
+                    "codigo": 1,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Empréstimo Crédito Pessoal Abertura de Contas",
+                    "codigo": 2,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Renovação de Empréstimo Consignado",
+                    "codigo": 3,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Empréstimo Saque Cartão Consignado",
+                    "codigo": 4,
+                    "habilitado": false
+                  },
+                  {
+                    "nome": "Empréstimo Pessoal",
+                    "codigo": 5,
+                    "habilitado": false
+                  },
+                  {
+                    "nome": "Empréstimo Consignado",
+                    "codigo": 6,
+                    "habilitado": false
+                  }
+                ],
+                "nomeMae": "Lea Maria Cancado Lemos",
+                "clienteMB": true,
+                "beneficios": [
+                  {
+                    "numero": 1837456051,
+                    "dataUltimoPagamento": "",
+                    "dataProximoPagamento": "07/10/2022",
+                    "descricaoStatusUltimoPagamento": "PREVISTO",
+                    "descricaoStatusProximoPagamento": "PREVISTO",
+                    "valorUltimoPagamento": 2832,
+                    "descricaoEspecieBeneficio": "APOSENTADORIA POR TEMPO DE CONTRIBUICAO",
+                    "dataVencimentoProvaVida": "31/12/2023"
+                  }
+                ],
+                "correntista": true,
+                "beneficiario": true,
+                "qtdBeneficios": 0,
+                "dataNascimento": "05/02/1981",
+                "telefoneValido": false,
+                "pessoaVulneravel": false,
+                "numeroReferencial": 3721968,
+                "possuiDataPrevista": false,
+                "telefoneQualificado": null,
+                "listaBeneficiosFiltrada": "",
+                "indicadorPossuiPropostaCP": false
+              },
+              "statusCode": 200
+            },
+            "code": 200
+          },
+          "correntista": {
+            "body": {
+              "body": {
+                "cpf": input,
+                "nome": "Steve Jobs",
+                "sexo": "Masculino",
+                "menus": [
+                  {
+                    "nome": "Empréstimo FGTS",
+                    "codigo": 1,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Empréstimo Crédito Pessoal Abertura de Contas",
+                    "codigo": 2,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Renovação de Empréstimo Consignado",
+                    "codigo": 3,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Empréstimo Saque Cartão Consignado",
+                    "codigo": 4,
+                    "habilitado": false
+                  },
+                  {
+                    "nome": "Empréstimo Pessoal",
+                    "codigo": 5,
+                    "habilitado": false
+                  },
+                  {
+                    "nome": "Empréstimo Consignado",
+                    "codigo": 6,
+                    "habilitado": false
+                  }
+                ],
+                "nomeMae": "Lea Maria Cancado Lemos",
+                "clienteMB": true,
+                "beneficios": [],
+                "correntista": true,
+                "beneficiario": false,
+                "qtdBeneficios": 0,
+                "dataNascimento": "05/02/1981",
+                "telefoneValido": false,
+                "pessoaVulneravel": false,
+                "numeroReferencial": 3721968,
+                "possuiDataPrevista": false,
+                "telefoneQualificado": null,
+                "listaBeneficiosFiltrada": "",
+                "indicadorPossuiPropostaCP": false
+              },
+              "statusCode": 200
+            },
+            "code": 200
+          },
+          "contaParalisa": {
+            "body": {
+              "body": {
+                "cpf": input,
+                "nome": "Steve Jobs",
+                "sexo": "Masculino",
+                "menus": [
+                  {
+                    "nome": "Empréstimo FGTS",
+                    "codigo": 1,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Empréstimo Crédito Pessoal Abertura de Contas",
+                    "codigo": 2,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Renovação de Empréstimo Consignado",
+                    "codigo": 3,
+                    "habilitado": true
+                  },
+                  {
+                    "nome": "Empréstimo Saque Cartão Consignado",
+                    "codigo": 4,
+                    "habilitado": false
+                  },
+                  {
+                    "nome": "Empréstimo Pessoal",
+                    "codigo": 5,
+                    "habilitado": false
+                  },
+                  {
+                    "nome": "Empréstimo Consignado",
+                    "codigo": 6,
+                    "habilitado": false
+                  }
+                ],
+                "nomeMae": "Lea Maria Cancado Lemos",
+                "clienteMB": true,
+                "beneficios": [],
+                "correntista": false,
+                "beneficiario": false,
+                "qtdBeneficios": 0,
+                "dataNascimento": "05/02/1981",
+                "telefoneValido": false,
+                "pessoaVulneravel": false,
+                "numeroReferencial": 3721968,
+                "possuiDataPrevista": false,
+                "telefoneQualificado": null,
+                "listaBeneficiosFiltrada": "",
+                "indicadorPossuiPropostaCP": false
+              },
+              "statusCode": 200
+            },
+            "code": 200
+          }
         },
         "naoCliente": {
           "body": {
@@ -387,6 +571,72 @@ async function custom_mock_apis(params) {
         "statusCode": 400
       }
     },
+    "api_simulacaoRenovacao": {
+      "200": {
+        "body": {
+          "statusCode": 200,
+          "response": {
+            "valorLiquidado": "24.626,43",
+            "valorTroco": "2.206,45",
+            "valorLimitePreAprovadoProduto": "26.832,88",
+            "quantidadeParcela": 84,
+            "valorParcela": "691,70",
+            "contratosRenovados": [
+              {
+                "numeroContrato": 803824515
+              },
+              {
+                "numeroContrato": 804037916
+              }
+            ],
+            "descricaoEspecieBeneficio": "Pensao Por Morte",
+            "valorMinimoParcelas": 78,
+            "valorMaximoParcelas": 84,
+            "valorMaximoTroco": "2.206,45",
+            "valorMinimoTroco": "150,00",
+            "contratosRenovadosFormatados": "803824515, 804037916"
+          }
+        },
+        "code": 200
+      },
+      "400": {
+        "ClienteSemProdutos": {
+          "body": {
+            "key": "ClienteSemProdutos",
+            "statusCode": 400
+          },
+          "code": 400
+        },
+        "ClienteNaoPossuiContratoMinimoQuitacao": {
+          "body": {
+            "key": "ClienteNaoPossuiContratoMinimoQuitacao",
+            "statusCode": 400
+          },
+          "code": 400
+        },
+        "NaoExisteContratosAptos": {
+          "body": {
+            "key": "NaoExisteContratosAptos",
+            "statusCode": 400
+          },
+          "code": 400
+        },
+        "ClienteRenovacaoAndamento": {
+          "body": {
+            "key": "ClienteRenovacaoAndamento",
+            "statusCode": 400
+          },
+          "code": 400
+        },
+        "ChaveNaoMapeada": {
+          "body": {
+            "key": "ChaveNaoMapeada",
+            "statusCode": 400
+          },
+          "code": 400
+        }
+      }
+    },
     "api_obter_contratos_aptos_renovar": {
       "200": {
         "body": {
@@ -402,7 +652,72 @@ async function custom_mock_apis(params) {
             "statusCode": 400
           },
           "code": 400
+        },
+        "ClienteNaoPossuiContratoMinimoQuitacao": {
+          "body": {
+            "key": "ClienteNaoPossuiContratoMinimoQuitacao",
+            "statusCode": 400
+          },
+          "code": 400
+        },
+        "NaoExisteContratosAptos": {
+          "body": {
+            "key": "NaoExisteContratosAptos",
+            "statusCode": 400
+          },
+          "code": 400
+        },
+        "ClienteRenovacaoAndamento": {
+          "body": {
+            "key": "ClienteRenovacaoAndamento",
+            "statusCode": 400
+          },
+          "code": 400
+        },
+        "ChaveNaoMapeada": {
+          "body": {
+            "key": "ChaveNaoMapeada",
+            "statusCode": 400
+          },
+          "code": 400
         }
+      }
+    },
+    "api_obter_token_IN100": {
+      "200": {
+        "body": {
+          "response": {
+            "statusCode": 200,
+            "response": "Token obtido com sucesso."
+          },
+          "statusCode": 200
+        },
+        "code": 200
+      },
+      "400": {
+        "body": {
+          "statusCode": 400,
+          "key": "NaoPossuiAutorizacaoConsultaIN100"
+        },
+        "code": 400
+      }
+    },
+    "api_consultar_IN100": {
+      "200": {
+        "body": {
+          "response": {
+            "statusCode": 200,
+            "response": "Consulta IN100 realizada com sucesso."
+          },
+          "statusCode": 200
+        },
+        "code": 200
+      },
+      "400": {
+        "body": {
+          "error": "Missing param: Faltando parâmetros obrigatórios"
+        },
+        "code": 400
       }
     },
     "api_palavra_chave": {
@@ -1305,7 +1620,7 @@ async function custom_mock_apis(params) {
       'api_buscaCliente': responses.api_buscaCliente[400]
     },
     '03473167606': {
-      'api_buscaCliente': responses.api_buscaCliente[200].cliente,
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
       'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[200],
       'api_gerar_prospect': responses.api_gerar_prospect[200],
       'api_receita_federal': responses.api_receita_federal[400],
@@ -1627,6 +1942,11 @@ async function custom_mock_apis(params) {
       'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
       'api_validar_midia': responses.api_validar_midia[400].tamanho.pdf
+    },
+    '42518511024': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_simulacaoRenovacao': responses.api_simulacaoRenovacao[400]
     }
   }
 
