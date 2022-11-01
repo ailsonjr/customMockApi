@@ -85,6 +85,13 @@ async function custom_mock_apis(params) {
             "message": "Dados da comunicação não encontrados."
           }
         }
+      },
+      "500":{
+        "code":500,
+        "body":{
+          "statusCode": 500,
+          "message": "Não foi possível executar a função Comunicação procura Oferta Renovação.",
+        }
       }
     },
     "api_midias": {
