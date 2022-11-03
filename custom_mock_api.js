@@ -86,9 +86,9 @@ async function custom_mock_apis(params) {
           }
         }
       },
-      "500":{
-        "code":500,
-        "body":{
+      "500": {
+        "code": 500,
+        "body": {
           "statusCode": 500,
           "message": "Não foi possível executar a função Comunicação procura Oferta Renovação.",
         }
@@ -117,69 +117,8 @@ async function custom_mock_apis(params) {
         }
       },
       "400": {
-        "tamanho": {
-          "video": {
-            "body": {
-              "statusCode": 400,
-              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/videos-bot-mel/Video_1_MEL_CAMERA_NEW_v2.mp4",
-              "tipoMidia": "video/mp4",
-              "tamanhoMidia": "10.9 MB",
-              "tempoMidia": "7.9 segundos",
-              "key": "tamanhoLimiteExcedido",
-            }
-          },
-          "pdf": {
-            "body": {
-              "statusCode": 400,
-              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/PDF-bot-mel/%5BDESCONTINUADO%5D+MB_CartilhaMel_Conta+Corrente.pdf",
-              "tipoMidia": "pdf",
-              "tamanhoMidia": "10.9 MB",
-              "tempoMidia": "7.9 segundos",
-              "key": "tamanhoLimiteExcedido",
-            }
-          },
-          "imagem": {
-            "body": {
-              "statusCode": 400,
-              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/imagens-bot-mel/MB_Mel_Orientacoes-Copia-de-Contrato_2021_1080x1080px-Final.jpg",
-              "tipoMidia": "image/jpg",
-              "tamanhoMidia": "10.9 MB",
-              "tempoMidia": "7.9 segundos",
-              "key": "tamanhoLimiteExcedido",
-            }
-          }
-        },
-        "tempo": {
-          "video": {
-            "body": {
-              "statusCode": 400,
-              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/videos-bot-mel/Video_1_MEL_CAMERA_NEW_v2.mp4",
-              "tipoMidia": "video/mp4",
-              "tamanhoMidia": "10.9 MB",
-              "tempoMidia": "7.9 segundos",
-              "key": "tamanhoLimiteExcedido",
-            }
-          },
-          "pdf": {
-            "body": {
-              "statusCode": 400,
-              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/PDF-bot-mel/%5BDESCONTINUADO%5D+MB_CartilhaMel_Conta+Corrente.pdf",
-              "tipoMidia": "pdf",
-              "tamanhoMidia": "10.9 MB",
-              "tempoMidia": "7.9 segundos",
-              "key": "tamanhoLimiteExcedido",
-            }
-          },
-          "imagem": {
-            "body": {
-              "statusCode": 400,
-              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/imagens-bot-mel/MB_Mel_Orientacoes-Copia-de-Contrato_2021_1080x1080px-Final.jpg",
-              "tipoMidia": "image/jpg",
-              "tamanhoMidia": "10.9 MB",
-              "tempoMidia": "7.9 segundos",
-              "key": "tamanhoLimiteExcedido",
-            }
-          }
+        "body": {
+          "statusCode": 400
         }
       }
     },
@@ -1955,7 +1894,7 @@ async function custom_mock_apis(params) {
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[500],
       'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao
     },
-    '42782806025':{
+    '42782806025': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[500],
       'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[200],
@@ -1963,7 +1902,7 @@ async function custom_mock_apis(params) {
       'api_obter_token_IN100': responses.api_obter_token_IN100[200],
       'api_simulacao_renovacao': responses.api_simulacao_renovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
     },
-    '40234917059':{
+    '40234917059': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[500],
       'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[200],
@@ -1972,7 +1911,7 @@ async function custom_mock_apis(params) {
       'api_simulacao_renovacao': responses.api_simulacao_renovacao[200],
       'api_simulacao_renovacao_2': responses.api_simulacao_renovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
     },
-    '55350900005':{
+    '55350900005': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[500],
       'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[200],
@@ -1981,7 +1920,7 @@ async function custom_mock_apis(params) {
       'api_simulacao_renovacao': responses.api_simulacao_renovacao[200],
       'api_simulacao_renovacao_3': responses.api_simulacao_renovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
     },
-    '33329623020':{
+    '33329623020': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[500],
       'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[200],
@@ -1989,7 +1928,7 @@ async function custom_mock_apis(params) {
       'api_obter_token_IN100': responses.api_obter_token_IN100[400],
       'api_simulacao_renovacao': responses.api_simulacao_renovacao[400].ClienteNaoPossuiContratoMinimoQuitacao
     },
-    '88970134069':{
+    '88970134069': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[500],
       'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[200],
