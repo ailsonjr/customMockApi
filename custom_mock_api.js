@@ -95,7 +95,18 @@ async function custom_mock_apis(params) {
           }
         },
         "fora_periodo_disponibilidade": {
-
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "periodo": {
+              "horarioInicio": "00:01",
+              "horarioTermino": "17:00",
+              "dentroPeriodoDisponibilidade": true,
+              "horaAtualFormatada": "16:46",
+              "tempoRestanteAtehTermino": "0:14",
+              "permiteEmissaoCodigo": false
+            },
+          }
         }
       },
       "500": {
