@@ -4,9 +4,22 @@ async function custom_cpfs_mockados(params) {
   let result;
 
   const responseCpfs = {
+    '20667028030': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[500],
+    },
     '47770238005': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
       'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[500],
+    },
+    '63328133003': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
       'api_gerar_prospect': responses.api_gerar_prospect[500],
     },
     '13170849697': {
@@ -412,3 +425,4 @@ async function custom_cpfs_mockados(params) {
 }
 
 module.exports = custom_cpfs_mockados
+
