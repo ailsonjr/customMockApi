@@ -1,5 +1,122 @@
 async function custom_mock_apis(params) {
   return {
+    "api_periodo_disponibilidade_numero": {
+      "200": {
+        "dentro_periodo_disponibilidade": {
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "periodo": {
+              "horarioInicio": "00:01",
+              "horarioTermino": "17:00",
+              "dentroPeriodoDisponibilidade": true
+            },
+          }
+        }
+      },
+      "500": {
+        "code": 500,
+        "body": {
+          "statusCode": 500,
+          "message": "Não foi possível executar a função Periodo Disponibilidade.",
+        }
+      }
+    },
+    "api_consultar_contas_aptas": {
+      "200": {
+        "uma_conta": {
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "contasAptas": [
+              {
+                "banco": 260,
+                "agencia": 1,
+                "conta": "11111",
+                "contaDigito": 1,
+                "tipoContaBancaria": "Corrente"
+              }
+            ],
+          }
+        },
+        "mais_de_uma_conta": {
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "contasAptas": [
+              {
+                "banco": 389,
+                "agencia": 216,
+                "conta": "1010011",
+                "contaDigito": 5,
+                "tipoContaBancaria": "Corrente"
+              },
+              {
+                "banco": 389,
+                "agencia": 216,
+                "conta": "1018312",
+                "contaDigito": 9,
+                "tipoContaBancaria": "Corrente"
+              }
+            ],
+            "listaContas": "*1* - Agência: *0216* Conta final: *⁎⁎.⁎⁎⁎.011-5*\n\n*2* - Agência: *0216* Conta final: *⁎⁎.⁎⁎⁎.312-9*\n\n*3* - Nenhuma das opções",
+          }
+        },
+        "sem_conta": {
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "contasAptas": [],
+          }
+        }
+      },
+      "500": {
+        "code": 500,
+        "body": {
+          "statusCode": 500,
+          "message": "Não foi possivel executar a função Aptas Saque Lotérica",
+        }
+      }
+    },
+    "api_periodo_disponibilidade_id": {
+      "200": {
+        "dentro_periodo_disponibilidade": {
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "periodo": {
+              "horarioInicio": "00:01",
+              "horarioTermino": "17:00",
+              "dentroPeriodoDisponibilidade": true,
+              "horaAtualFormatada": "16:44",
+              "tempoRestanteAtehTermino": "0:16",
+              "permiteEmissaoCodigo": true
+            },
+          }
+        },
+        "fora_periodo_disponibilidade": {
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "periodo": {
+              "horarioInicio": "00:01",
+              "horarioTermino": "17:00",
+              "dentroPeriodoDisponibilidade": true,
+              "horaAtualFormatada": "16:46",
+              "tempoRestanteAtehTermino": "0:14",
+              "permiteEmissaoCodigo": false
+            },
+          }
+        }
+      },
+      "500": {
+        "code": 500,
+        "body": {
+          "statusCode": 500,
+          "message": "Não foi possível executar a função Consulta Status da Proposta",
+        }
+      }
+    },
     "api_permissoes_menu": {
       "200": {
         "saque_loterica": {
@@ -43,6 +160,31 @@ async function custom_mock_apis(params) {
                 "habilitado": true
               }
             ]
+          }
+        }
+      }
+    },
+    "api_atualizar_dados_bancarios": {
+      "200": {
+        "code": 200,
+        "body": {
+          "statusCode": 200,
+          "response": "Dados Bancários Atualizados"
+        }
+      },
+      "400": {
+        "semKey": {
+          "code": 400,
+          "body": {
+            "statusCode": 400,
+            "message": "Não foi possível executar a função Cancelar Prospect"
+          }
+        },
+        "comKey": {
+          "code": 400,
+          "body": {
+            "statusCode": 400,
+            "key": "ProspectNaoEncontrada"
           }
         }
       }
