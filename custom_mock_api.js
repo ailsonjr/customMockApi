@@ -1,9 +1,5 @@
 async function custom_mock_apis(params) {
-  const { input } = params;
-  let mock = false;
-  let result;
-
-  const responses = {
+  return {
     "api_cancelar_prospect": {
       "200": {
         "code": 200,
@@ -117,8 +113,69 @@ async function custom_mock_apis(params) {
         }
       },
       "400": {
-        "body": {
-          "statusCode": 400
+        "tamanho": {
+          "video": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/videos-bot-mel/Video_1_MEL_CAMERA_NEW_v2.mp4",
+              "tipoMidia": "video/mp4",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
+          },
+          "pdf": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/PDF-bot-mel/%5BDESCONTINUADO%5D+MB_CartilhaMel_Conta+Corrente.pdf",
+              "tipoMidia": "pdf",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
+          },
+          "imagem": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/imagens-bot-mel/MB_Mel_Orientacoes-Copia-de-Contrato_2021_1080x1080px-Final.jpg",
+              "tipoMidia": "image/jpg",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
+          }
+        },
+        "tempo": {
+          "video": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/videos-bot-mel/Video_1_MEL_CAMERA_NEW_v2.mp4",
+              "tipoMidia": "video/mp4",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
+          },
+          "pdf": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/PDF-bot-mel/%5BDESCONTINUADO%5D+MB_CartilhaMel_Conta+Corrente.pdf",
+              "tipoMidia": "pdf",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
+          },
+          "imagem": {
+            "body": {
+              "statusCode": 400,
+              "url": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/imagens-bot-mel/MB_Mel_Orientacoes-Copia-de-Contrato_2021_1080x1080px-Final.jpg",
+              "tipoMidia": "image/jpg",
+              "tamanhoMidia": "10.9 MB",
+              "tempoMidia": "7.9 segundos",
+              "key": "tamanhoLimiteExcedido",
+            }
+          }
         }
       }
     },
@@ -171,7 +228,6 @@ async function custom_mock_apis(params) {
           "beneficiario": {
             "body": {
               "body": {
-                "cpf": input,
                 "nome": "Steve Jobs",
                 "sexo": "Masculino",
                 "menus": [
@@ -228,7 +284,6 @@ async function custom_mock_apis(params) {
           "correntistaBeneficiario": {
             "body": {
               "body": {
-                "cpf": input,
                 "nome": "Steve Jobs",
                 "sexo": "Masculino",
                 "menus": [
@@ -296,7 +351,6 @@ async function custom_mock_apis(params) {
           "correntista": {
             "body": {
               "body": {
-                "cpf": input,
                 "nome": "Steve Jobs",
                 "sexo": "Masculino",
                 "menus": [
@@ -353,7 +407,6 @@ async function custom_mock_apis(params) {
           "contaParalisa": {
             "body": {
               "body": {
-                "cpf": input,
                 "nome": "Steve Jobs",
                 "sexo": "Masculino",
                 "menus": [
@@ -411,7 +464,6 @@ async function custom_mock_apis(params) {
         "naoCliente": {
           "body": {
             "body": {
-              "cpf": input,
               "nome": "Sabrina Germano Silva De Araujo",
               "sexo": "Feminino",
               "menus": [
@@ -464,7 +516,6 @@ async function custom_mock_apis(params) {
       },
       "400": {
         "body": {
-          "cpf": input,
           "nome": "Amadeu Marcio Correia Barroso",
           "sexo": "Masculino",
           "menus": [
@@ -732,7 +783,6 @@ async function custom_mock_apis(params) {
       "200": {
         "body": {
           "cliente": {
-            "cpf": input,
             "nome": "Sabrina Germano Silva De Araujo",
             "sexo": null,
             "email": null,
@@ -945,7 +995,6 @@ async function custom_mock_apis(params) {
       "200": {
         "body": {
           "body": {
-            "cpf": input,
             "nome": "Amadeu Marcio Correia Barroso",
             "sexo": "Feminino",
             "obito": false,
@@ -1087,7 +1136,6 @@ async function custom_mock_apis(params) {
               {
                 "status": "Cancelada",
                 "cliente": {
-                  "cpf": input,
                   "nome": "Amadeu Marcio Correia Barroso",
                   "email": "teste@teste.com",
                   "dddCelular": 31,
@@ -1117,7 +1165,6 @@ async function custom_mock_apis(params) {
               {
                 "status": "Cancelada",
                 "cliente": {
-                  "cpf": input,
                   "nome": "Amadeu Marcio Correia Barroso",
                   "email": "chris_patricia86@hotmail.com",
                   "dddCelular": 31,
@@ -1147,7 +1194,6 @@ async function custom_mock_apis(params) {
               {
                 "status": "Cancelada",
                 "cliente": {
-                  "cpf": input,
                   "nome": "Amadeu Marcio Correia Barroso",
                   "email": "teste@teste.com",
                   "dddCelular": 31,
@@ -1177,7 +1223,6 @@ async function custom_mock_apis(params) {
               {
                 "status": "Cancelada",
                 "cliente": {
-                  "cpf": input,
                   "nome": "Amadeu Marcio Correia Barroso",
                   "email": "teste@teste.com",
                   "dddCelular": 31,
@@ -1318,7 +1363,6 @@ async function custom_mock_apis(params) {
                   {
                     "status": "EmAndamento",
                     "cliente": {
-                      "cpf": input,
                       "nome": "Steve Jobs",
                       "email": null,
                       "dddCelular": 99,
@@ -1366,7 +1410,6 @@ async function custom_mock_apis(params) {
                   {
                     "status": "Integrada",
                     "cliente": {
-                      "cpf": input,
                       "nome": "Steve Jobs",
                       "email": null,
                       "dddCelular": 99,
@@ -1414,7 +1457,6 @@ async function custom_mock_apis(params) {
                   {
                     "status": "Cancelada",
                     "cliente": {
-                      "cpf": input,
                       "nome": "Steve Jobs",
                       "email": null,
                       "dddCelular": 99,
@@ -1463,7 +1505,6 @@ async function custom_mock_apis(params) {
                 {
                   "status": "Integrada",
                   "cliente": {
-                    "cpf": input,
                     "nome": "Steve Jobs",
                     "email": null,
                     "dddCelular": 99,
@@ -1495,7 +1536,6 @@ async function custom_mock_apis(params) {
                 {
                   "status": "Cancelada",
                   "cliente": {
-                    "cpf": input,
                     "nome": "Steve Jobs",
                     "email": null,
                     "dddCelular": 99,
@@ -1521,7 +1561,6 @@ async function custom_mock_apis(params) {
                 {
                   "status": "EmAndamento",
                   "cliente": {
-                    "cpf": input,
                     "nome": "Steve Jobs",
                     "email": null,
                     "dddCelular": 99,
@@ -1560,398 +1599,4 @@ async function custom_mock_apis(params) {
       }
     }
   }
-
-  const responseCpfs = {
-    '13170849697': {
-      'api_buscaCliente': responses.api_buscaCliente[400]
-    },
-    '03473167606': {
-      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
-      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_receita_federal': responses.api_receita_federal[400],
-      'api_consulta_status_proposta_FGTS': responses.api_consulta_status_proposta_FGTS[400]
-    },
-    '06984815690': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_consulta_status_proposta_FGTS': responses.api_consulta_status_proposta_FGTS[400]
-    },
-    '53911324014': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[400].QualquerChaveNova,
-      'api_buscaCliente': responses.api_buscaCliente[200].cliente,
-      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada
-    },
-    '05175062034': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[400].PossuiPropostaAberturaContaIntegrada,
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.Integrada
-    },
-    '13436117099': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[200]
-    },
-    '95580658036': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[400],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[200]
-    },
-    '32073821006': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[400],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[200]
-    },
-    '94603715072': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[400],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[400].PropostaNaoEncontrada,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[400],
-      'api_validar_midia': responses.api_validar_midia[200]
-    },
-    '78448642066': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[400],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[200]
-    },
-    '06647421068': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[400],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[200]
-    },
-    '79377920000': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[400],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[200]
-    },
-    '56124595052': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': {
-        "200": responses.api_validar_midia[200],
-        "400": responses.api_validar_midia[400].tamanho.video
-      }
-    },
-    '01612274064': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[400].tempo.video
-    },
-    '30418932077': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[400].PossuiPropostaAberturaContaEmAndamento
-    },
-    '66316398085': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.Cancelada,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[400].PossuiPropostaAberturaContaReprovada
-    },
-    '99157694079': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_consultar_propostas': responses.api_consultar_propostas[500],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[400].PossuiPropostaAberturaContaEmAndamento
-    },
-    '55964267092': {
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[400].IdadeNaoQualificada,
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-    },
-    '62021301052': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[400].PossuiPropostaCpEmAndamento,
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_consultar_propostas': responses.api_consultar_propostas[200].CreditoPessoal.EmAndamento.ContaDigital,
-    },
-    '20296170089': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[200],
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-    },
-    '07253602080': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[400].PossuiPropostaAberturaContaEmAndamento,
-      'api_consultar_propostas': { ...responses.api_consultar_propostas[200].AberturaConta.Cancelada, ...responses.api_consultar_propostas[200].AberturaConta.Cancelada.body.response.push(responses.api_consultar_propostas[200].AberturaConta.EmAndamento.body.response[0]) }
-    },
-    '96644214053': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[400],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[200],
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-    },
-    '02377396070': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_cancelar_prospect': responses.api_cancelar_prospect[200],
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-    },
-    '51523051000': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[500],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[200]
-    },
-    '92233604040': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[400],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[200]
-    },
-    '58087823095': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[400],
-      'api_validar_midia': responses.api_validar_midia[200]
-    },
-    '32128064007': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[400].tempo.imagem
-    },
-    '22242962078': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[400].tempo.pdf
-    },
-    '35016643032': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[400].tamanho.imagem
-    },
-    '61400381037': {
-      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
-      'api_atualizar_dados_complementares': responses.api_atualizar_dados_complementares[200],
-      'api_atualizar_enderecos': responses.api_atualizar_enderecos[200],
-      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.EmAndamento,
-      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_midias': responses.api_midias[200],
-      'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_pesquisar_localidade': responses.api_pesquisar_localidade[200],
-      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[200],
-      'api_proposta_credito': responses.api_proposta_credito[200],
-      'api_validar_midia': responses.api_validar_midia[400].tamanho.pdf
-    },
-    '42518511024': {
-      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
-      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].ComunicacaoNaoEncontrada,
-      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao
-    },
-    '42782806025': {
-      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
-      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[200],
-      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_obter_token_IN100': responses.api_obter_token_IN100[200],
-      'api_simulacaoRenovacao': responses.api_simulacaoRenovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
-    },
-    '40234917059': {
-      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
-      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[200],
-      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_obter_token_IN100': responses.api_obter_token_IN100[200],
-      'api_simulacaoRenovacao': responses.api_simulacaoRenovacao[200],
-      'api_simulacaoRenovacao2': responses.api_simulacaoRenovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
-    },
-    '55350900005': {
-      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
-      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[200],
-      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_obter_token_IN100': responses.api_obter_token_IN100[200],
-      'api_simulacaoRenovacao': responses.api_simulacaoRenovacao[200],
-      'api_simulacaoRenovacao2': responses.api_simulacaoRenovacao[200],
-      'api_simulacaoRenovacao3': responses.api_simulacaoRenovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
-    },
-    '33329623020': {
-      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
-      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[200],
-      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_obter_token_IN100': responses.api_obter_token_IN100[400],
-      'api_simulacaoRenovacao3': responses.api_simulacaoRenovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
-    },
-    '88970134069': {
-      'api_buscaCliente': responses.api_buscaCliente[200].cliente.beneficiario,
-      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[200],
-      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteNaoPossuiContratoMinimoQuitacao,
-      'api_gerar_prospect': responses.api_gerar_prospect[200],
-      'api_obter_token_IN100': responses.api_obter_token_IN100[400],
-      'api_simulacaoRenovacao3': responses.api_simulacaoRenovacao[200],
-      'api_consultar_IN100': responses.api_consultar_IN100[200],
-      'api_simulacaoRenovacao2': responses.api_simulacaoRenovacao[400].ClienteNaoPossuiContratoMinimoQuitacao
-    }
-  }
-
-  if (responseCpfs.hasOwnProperty(input.trim())) {
-    mock = true;
-    result = responseCpfs[input.trim()]
-  }
-  console.log('result', result);
-
-  return {
-    input,
-    mock,
-    result
-  }
 }
-
-module.exports = custom_mock_apis
