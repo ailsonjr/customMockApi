@@ -721,7 +721,7 @@ async function custom_mock_apis(params) {
         "statusCode": 400
       }
     },
-    "api_simulacao_renovacao": {
+    "api_simulacaoRenovacao": {
       "200": {
         "body": {
           "statusCode": 200,
