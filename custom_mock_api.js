@@ -1,5 +1,21 @@
 async function custom_mock_apis(params) {
   return {
+    "api_atualizar_dados_bancarios": {
+      "200": {
+        "code": 200,
+        "body": {
+          "statusCode": 200,
+          "response": "Dados Bancários Atualizados",
+        }
+      },
+      "500": {
+        "code": 500,
+        "body": {
+          "statusCode": 500,
+          "message": "Não foi possível executar a função Atualizar Dados Bancários",
+        }
+      }
+    },
     "api_periodo_disponibilidade_numero": {
       "200": {
         "dentro_periodo_disponibilidade": {
