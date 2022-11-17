@@ -1,5 +1,52 @@
 async function custom_mock_apis(params) {
   return {
+    "api_permissoes_menu": {
+      "200": {
+        "saque_loterica": {
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "menuOpcoes": [
+              {
+                "codigo": 1,
+                "nome": "Empréstimo FGTS",
+                "habilitado": false
+              },
+              {
+                "codigo": 2,
+                "nome": "Empréstimo Crédito Pessoal Abertura de Contas",
+                "habilitado": false
+              },
+              {
+                "codigo": 3,
+                "nome": "Renovação de Empréstimo Consignado",
+                "habilitado": false
+              },
+              {
+                "codigo": 4,
+                "nome": "Empréstimo Saque Cartão Consignado",
+                "habilitado": false
+              },
+              {
+                "codigo": 5,
+                "nome": "Empréstimo Pessoal",
+                "habilitado": false
+              },
+              {
+                "codigo": 6,
+                "nome": "Empréstimo Consignado",
+                "habilitado": false
+              },
+              {
+                "codigo": 7,
+                "nome": "Saque Lotérica",
+                "habilitado": true
+              }
+            ]
+          }
+        }
+      }
+    },
     "api_cancelar_prospect": {
       "200": {
         "code": 200,
@@ -1600,3 +1647,8 @@ async function custom_mock_apis(params) {
     }
   }
 }
+<<<<<<< HEAD
+=======
+
+module.exports = custom_mock_apis
+>>>>>>> 45049d362ee8c83524b76fccff2932698daca41e
