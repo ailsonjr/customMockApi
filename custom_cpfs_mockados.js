@@ -412,6 +412,90 @@ async function custom_cpfs_mockados(params) {
       'api_consultar_IN100': responses.api_consultar_IN100[200],
       'api_simulacaoRenovacao2': responses.api_simulacaoRenovacao[200],
       'api_simulacaoRenovacao3': responses.api_simulacaoRenovacao[400].ClienteNaoPossuiContratoMinimoQuitacao,
+    },
+    '20667028030': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_periodo_disponibilidade_id': responses.api_periodo_disponibilidade_id[200].dentro_periodo_disponibilidade,
+      'api_consultar_contas_aptas': responses.api_consultar_contas_aptas[200].mais_de_uma_conta,
+      'api_atualizar_dados_bancarios': responses.api_atualizar_dados_bancarios[500],
+    },
+    '47770238005': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[500],
+    },
+    '63328133003': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[500],
+    },
+    '58281367040': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_periodo_disponibilidade_id': responses.api_periodo_disponibilidade_id[200].dentro_periodo_disponibilidade,
+      'api_consultar_contas_aptas': responses.api_consultar_contas_aptas[200].uma_conta,
+      'api_atualizar_dados_bancarios': responses.api_atualizar_dados_bancarios[200],
+      'api_proposta_credito': responses.api_proposta_credito[400]
+    },
+    '53152757018': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_periodo_disponibilidade_id': responses.api_periodo_disponibilidade_id[200].dentro_periodo_disponibilidade,
+      'api_consultar_contas_aptas': responses.api_consultar_contas_aptas[200].mais_de_uma_conta,
+      'api_atualizar_dados_bancarios': responses.api_atualizar_dados_bancarios[200],
+      'api_proposta_credito': responses.api_proposta_credito[400]
+    },
+    '27351442088': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_periodo_disponibilidade_id': responses.api_periodo_disponibilidade_id[200].dentro_periodo_disponibilidade,
+      'api_consultar_contas_aptas': responses.api_consultar_contas_aptas[200].mais_de_uma_conta,
+      'api_atualizar_dados_bancarios': responses.api_atualizar_dados_bancarios[200],
+      'api_proposta_credito': responses.api_proposta_credito[400]
+    },
+    '77296927089': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_periodo_disponibilidade_id': responses.api_periodo_disponibilidade_id[200].dentro_periodo_disponibilidade,
+      'api_consultar_contas_aptas': responses.api_consultar_contas_aptas[200].mais_de_uma_conta,
+      'api_atualizar_dados_bancarios': responses.api_atualizar_dados_bancarios[200],
+      'api_proposta_credito': responses.api_proposta_credito[200],
+      'api_palavra_chave': responses.api_palavra_chave[400]
+    },
+    '48813201060': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_periodo_disponibilidade_id': responses.api_periodo_disponibilidade_id[200].dentro_periodo_disponibilidade,
+      'api_consultar_contas_aptas': responses.api_consultar_contas_aptas[200].uma_conta,
+      'api_atualizar_dados_bancarios': responses.api_atualizar_dados_bancarios[200],
+      'api_proposta_credito': responses.api_proposta_credito[200],
+      'api_palavra_chave': responses.api_palavra_chave[400]
+    },
+    '54981830033': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_periodo_disponibilidade_id': responses.api_periodo_disponibilidade_id[200].dentro_periodo_disponibilidade,
+      'api_consultar_contas_aptas': responses.api_consultar_contas_aptas[200].uma_conta,
+      'api_atualizar_dados_bancarios': responses.api_atualizar_dados_bancarios[200],
+      'api_proposta_credito': responses.api_proposta_credito[200],
+      'api_palavra_chave': responses.api_palavra_chave[200]
     }
   }
 

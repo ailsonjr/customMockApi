@@ -1,5 +1,69 @@
 async function custom_mock_apis(params) {
   return {
+    "api_consulta_saque_loterica": {
+      "200": {
+        "reprovada": {
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "response": {
+              "numeroOperacao": 570000126,
+              "agencia": 1,
+              "conta": "11111",
+              "contaDigito": 1,
+              "mensagemAmigavelSituacaoProposta": "Mensagem de teste: \n*Sua solicitação da senha foi reprovada*",
+              "modalidadeCredito": "ContratoNovo",
+              "status": "Reprovada",
+              "cliente": {
+                "nome": "Steve Jobs"
+              },
+              "descricaoStatus": "Reprovada",
+              "descricaoModalidadeCredito": "string"
+            }
+          }
+        },
+        "em_andamento": {
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "response": {
+              "numeroOperacao": 570000126,
+              "agencia": 1,
+              "conta": "11111",
+              "contaDigito": 1,
+              "mensagemAmigavelSituacaoProposta": "Mensagem de teste: \n*Sua solicitação da senha está em andamento",
+              "modalidadeCredito": "ContratoNovo",
+              "status": "EmAndamento",
+              "cliente": {
+                "nome": "Steve Jobs"
+              },
+              "descricaoStatus": "Em Andamento",
+              "descricaoModalidadeCredito": "string"
+            }
+          }
+        },
+        "aprovada": {
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "response": {
+              "numeroOperacao": 570000126,
+              "agencia": 1,
+              "conta": "11111",
+              "contaDigito": 1,
+              "mensagemAmigavelSituacaoProposta": "Mensagem de teste: \n*Sua solicitação da senha foi aprovada",
+              "modalidadeCredito": "ContratoNovo",
+              "status": "Integrada",
+              "cliente": {
+                "nome": "Steve Jobs"
+              },
+              "descricaoStatus": "Integrada",
+              "descricaoModalidadeCredito": "string"
+            }
+          }
+        }
+      }
+    },
     "api_periodo_disponibilidade_numero": {
       "200": {
         "dentro_periodo_disponibilidade": {
@@ -186,6 +250,13 @@ async function custom_mock_apis(params) {
             "statusCode": 400,
             "key": "ProspectNaoEncontrada"
           }
+        }
+      },
+      "500": {
+        "code": 500,
+        "body": {
+          "statusCode": 500,
+          "message": "Não foi possível executar a função Atualizar Dados Bancários",
         }
       }
     },
@@ -379,7 +450,7 @@ async function custom_mock_apis(params) {
         }
       },
       "400": {},
-      "code": 200
+      "code": 400
     },
     "api_proposta_credito": {
       "200": {
@@ -1315,7 +1386,6 @@ async function custom_mock_apis(params) {
           "statusCode": 400
         },
         "code": 400
-
       },
       "500": {
         "code": 500,
@@ -1798,4 +1868,4 @@ async function custom_mock_apis(params) {
   }
 }
 
-module.exports = custom_mock_apis
+module.exports = custom_mock_apis;
