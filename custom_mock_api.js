@@ -3,62 +3,59 @@ async function custom_mock_apis(params) {
     "api_consulta_saque_loterica": {
       "200": {
         "reprovada": {
-          "code": 200,
           "body": {
             "statusCode": 200,
             "response": {
-              "numeroOperacao": 570000126,
+              "numeroOperacao": 570000993,
               "agencia": 1,
-              "conta": "11111",
-              "contaDigito": 1,
-              "mensagemAmigavelSituacaoProposta": "Mensagem de teste: \n*Sua solicitação da senha foi reprovada*",
-              "modalidadeCredito": "ContratoNovo",
-              "status": "Reprovada",
+              "conta": "1028465",
+              "contaDigito": 9,
+              "mensagemAmigavelSituacaoProposta": null,
+              "modalidadeCredito": "SaqueLoterica",
+              "status": "reprovada",
               "cliente": {
-                "nome": "Steve Jobs"
+                "nome": "IRENE RITA SOUZA ALCANTRA"
               },
               "descricaoStatus": "Reprovada",
-              "descricaoModalidadeCredito": "string"
+              "descricaoModalidadeCredito": "Saque lotérica"
             }
           }
         },
         "em_andamento": {
-          "code": 200,
           "body": {
             "statusCode": 200,
             "response": {
-              "numeroOperacao": 570000126,
+              "numeroOperacao": 570000993,
               "agencia": 1,
-              "conta": "11111",
-              "contaDigito": 1,
-              "mensagemAmigavelSituacaoProposta": "Mensagem de teste: \n*Sua solicitação da senha está em andamento",
-              "modalidadeCredito": "ContratoNovo",
+              "conta": "1028465",
+              "contaDigito": 9,
+              "mensagemAmigavelSituacaoProposta": null,
+              "modalidadeCredito": "SaqueLoterica",
               "status": "EmAndamento",
               "cliente": {
-                "nome": "Steve Jobs"
+                "nome": "IRENE RITA SOUZA ALCANTRA"
               },
               "descricaoStatus": "Em Andamento",
-              "descricaoModalidadeCredito": "string"
+              "descricaoModalidadeCredito": "Saque lotérica"
             }
           }
         },
         "aprovada": {
-          "code": 200,
           "body": {
             "statusCode": 200,
             "response": {
-              "numeroOperacao": 570000126,
+              "numeroOperacao": 570000993,
               "agencia": 1,
-              "conta": "11111",
-              "contaDigito": 1,
-              "mensagemAmigavelSituacaoProposta": "Mensagem de teste: \n*Sua solicitação da senha foi aprovada",
-              "modalidadeCredito": "ContratoNovo",
-              "status": "Integrada",
+              "conta": "1028465",
+              "contaDigito": 9,
+              "mensagemAmigavelSituacaoProposta": null,
+              "modalidadeCredito": "SaqueLoterica",
+              "status": "integrada",
               "cliente": {
-                "nome": "Steve Jobs"
+                "nome": "IRENE RITA SOUZA ALCANTRA"
               },
               "descricaoStatus": "Integrada",
-              "descricaoModalidadeCredito": "string"
+              "descricaoModalidadeCredito": "Saque lotérica"
             }
           }
         }
@@ -67,7 +64,6 @@ async function custom_mock_apis(params) {
     "api_periodo_disponibilidade_numero": {
       "200": {
         "dentro_periodo_disponibilidade": {
-          "code": 200,
           "body": {
             "statusCode": 200,
             "response": {
@@ -78,7 +74,6 @@ async function custom_mock_apis(params) {
           }
         },
         "fora_periodo_disponibilidade": {
-          "code": 200,
           "body": {
             "statusCode": 200,
             "response": {
@@ -100,7 +95,6 @@ async function custom_mock_apis(params) {
     "api_consultar_contas_aptas": {
       "200": {
         "uma_conta": {
-          "code": 200,
           "body": {
             "statusCode": 200,
             "contasAptas": [
@@ -115,7 +109,6 @@ async function custom_mock_apis(params) {
           }
         },
         "mais_de_uma_conta": {
-          "code": 200,
           "body": {
             "statusCode": 200,
             "contasAptas": [
@@ -138,7 +131,6 @@ async function custom_mock_apis(params) {
           }
         },
         "sem_conta": {
-          "code": 200,
           "body": {
             "statusCode": 200,
             "contasAptas": [],
@@ -156,7 +148,6 @@ async function custom_mock_apis(params) {
     "api_periodo_disponibilidade_id": {
       "200": {
         "dentro_periodo_disponibilidade": {
-          "code": 200,
           "body": {
             "statusCode": 200,
             "periodo": {
@@ -170,7 +161,6 @@ async function custom_mock_apis(params) {
           }
         },
         "fora_periodo_disponibilidade": {
-          "code": 200,
           "body": {
             "statusCode": 200,
             "periodo": {
