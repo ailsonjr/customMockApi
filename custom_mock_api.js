@@ -70,10 +70,21 @@ async function custom_mock_apis(params) {
           "code": 200,
           "body": {
             "statusCode": 200,
-            "periodo": {
+            "response": {
               "horarioInicio": "00:01",
               "horarioTermino": "17:00",
               "dentroPeriodoDisponibilidade": true
+            },
+          }
+        },
+        "fora_periodo_disponibilidade":{
+          "code": 200,
+          "body": {
+            "statusCode": 200,
+            "response": {
+              "horarioInicio": "00:01",
+              "horarioTermino": "17:00",
+              "dentroPeriodoDisponibilidade": false
             },
           }
         }
