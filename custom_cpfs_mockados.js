@@ -522,9 +522,21 @@ async function custom_cpfs_mockados(params) {
       'api_proposta_credito': responses.api_proposta_credito[200],
       'api_palavra_chave': responses.api_palavra_chave[200],
       'api_validar_midia': responses.api_validar_midia[200],
-      'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[200].fora_periodo_disponibilidade,
-      
+      'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[200].fora_periodo_disponibilidade
     },
+    '28371358016': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_periodo_disponibilidade_id': responses.api_periodo_disponibilidade_id[200].dentro_periodo_disponibilidade,
+      'api_consultar_contas_aptas': responses.api_consultar_contas_aptas[200].uma_conta,
+      'api_atualizar_dados_bancarios': responses.api_atualizar_dados_bancarios[200],
+      'api_proposta_credito': responses.api_proposta_credito[200],
+      'api_palavra_chave': responses.api_palavra_chave[200],
+      'api_validar_midia': responses.api_validar_midia[400].tamanho.video,
+      'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[200].dentro_periodo_disponibilidade
+    }
   }
 
   if (responseCpfs.hasOwnProperty(input.trim())) {

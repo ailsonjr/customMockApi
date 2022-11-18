@@ -77,7 +77,7 @@ async function custom_mock_apis(params) {
             },
           }
         },
-        "fora_periodo_disponibilidade":{
+        "fora_periodo_disponibilidade": {
           "code": 200,
           "body": {
             "statusCode": 200,
@@ -370,8 +370,12 @@ async function custom_mock_apis(params) {
           "statusCode": 200
         }
       },
-      "400": {},
-      "code": 200
+      "400": {
+        "body": {
+          "statusCode": 400
+        }
+      },
+      "code": 400
     },
     "api_validar_midia": {
       "200": {
