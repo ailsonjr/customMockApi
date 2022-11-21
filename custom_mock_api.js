@@ -1,5 +1,37 @@
 async function custom_mock_apis(params) {
   return {
+    "api_obter_codigo_validacao":{
+      "200":{
+        "code":200,
+        "body":{
+          "statusCode": 200,
+          "response": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/codigoValidacao/codigoValidacao-1668018533824.jpg",
+        }
+      },
+      "400":{
+        "PropostaDiaDiferente":{
+          "body": {
+            "key": "PropostaDiaDiferente",
+            "statusCode": 400
+          },
+          "code": 400
+        },
+        "ErroConversaoArquivoPdfEmImagem":{
+          "body": {
+            "key": "ErroConversaoArquivoPdfEmImagem",
+            "statusCode": 400
+          },
+          "code": 400
+        }
+      },
+      "500":{
+        "code":500,
+        "body":{
+          "statusCode": 500,
+          "message": "Não foi possível executar a função Obter Código Validação.",
+      }
+      }
+    },
     "api_consulta_saque_loterica": {
       "200": {
         "reprovada": {
@@ -58,6 +90,13 @@ async function custom_mock_apis(params) {
               "descricaoModalidadeCredito": "Saque lotérica"
             }
           }
+        }
+      },
+      "500": {
+        "code": 500,
+        "body": {
+          "statusCode": 500,
+          "message": "Não foi possível executar a função Consulta Saque Loterica.",
         }
       }
     },
@@ -353,12 +392,11 @@ async function custom_mock_apis(params) {
     },
     "api_midias": {
       "200": {
-        "body": {
           "body": {
+            "statusCode": 200,
             "response": "Informações da Mídia atualizadas"
           },
-          "statusCode": 200
-        }
+          "code": 200
       },
       "400": {
         "body": {
