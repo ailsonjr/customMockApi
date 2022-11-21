@@ -716,7 +716,8 @@ async function custom_cpfs_mockados(params) {
       'api_validar_midia': responses.api_validar_midia[200],
       'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[200].dentro_periodo_disponibilidade,
       'api_finalizar_proposta_operacao': responses.api_finalizar_proposta_operacao[200],
-      'api_consulta_saque_loterica': responses[200].aprovada
+      'api_consulta_saque_loterica': responses.api_consulta_saque_loterica[200].aprovada,
+      'api_obter_codigo_validacao': responses.api_obter_codigo_validacao[200]
     },
   }
 
