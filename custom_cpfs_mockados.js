@@ -12,6 +12,7 @@ async function custom_cpfs_mockados(params) {
       'api_periodo_disponibilidade_id': responses.api_periodo_disponibilidade_id[200].dentro_periodo_disponibilidade,
       'api_consultar_contas_aptas': responses.api_consultar_contas_aptas[200].mais_de_uma_conta,
       'api_atualizar_dados_bancarios': responses.api_atualizar_dados_bancarios[500],
+      'api_midias': responses.api_midias[200]
     },
     '47770238005': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
@@ -510,6 +511,7 @@ async function custom_cpfs_mockados(params) {
       'api_validar_midia': responses.api_validar_midia[200],
       'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[200].dentro_periodo_disponibilidade,
       'api_finalizar_proposta_operacao': responses.api_finalizar_proposta_operacao[400].PropostaJaFoiInicializada,
+      'api_midias': responses.api_midias[200]
     },
     '63000556044': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
@@ -522,7 +524,8 @@ async function custom_cpfs_mockados(params) {
       'api_proposta_credito': responses.api_proposta_credito[200],
       'api_palavra_chave': responses.api_palavra_chave[200],
       'api_validar_midia': responses.api_validar_midia[200],
-      'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[200].fora_periodo_disponibilidade
+      'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[200].fora_periodo_disponibilidade,
+      'api_midias': responses.api_midias[200]
     },
     '28371358016': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
@@ -535,7 +538,8 @@ async function custom_cpfs_mockados(params) {
       'api_proposta_credito': responses.api_proposta_credito[200],
       'api_palavra_chave': responses.api_palavra_chave[200],
       'api_validar_midia': responses.api_validar_midia[400].tamanho.video,
-      'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[200].dentro_periodo_disponibilidade
+      'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[200].dentro_periodo_disponibilidade,
+      'api_midias': responses.api_midias[200]
     },
     '08990943094': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
@@ -562,7 +566,8 @@ async function custom_cpfs_mockados(params) {
       'api_proposta_credito': responses.api_proposta_credito[200],
       'api_palavra_chave': responses.api_palavra_chave[200],
       'api_validar_midia': responses.api_validar_midia[200],
-      'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[500]
+      'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[500],
+      'api_midias': responses.api_midias[200]
     },
     '48482210050': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
@@ -574,7 +579,7 @@ async function custom_cpfs_mockados(params) {
       'api_atualizar_dados_bancarios': responses.api_atualizar_dados_bancarios[200],
       'api_proposta_credito': responses.api_proposta_credito[200],
       'api_palavra_chave': responses.api_palavra_chave[200],
-      'api_validar_midia': responses.api_validar_midia[400].tamanho.video,
+      'api_validar_midia': responses.api_validar_midia[200],
       'api_periodo_disponibilidade_numero': responses.api_periodo_disponibilidade_numero[200].dentro_periodo_disponibilidade,
       'api_finalizar_proposta_operacao': responses.api_finalizar_proposta_operacao[400].PropostaJaFoiInicializada
     }
