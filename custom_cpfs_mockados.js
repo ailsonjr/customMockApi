@@ -14,6 +14,12 @@ async function custom_cpfs_mockados(params) {
       'api_atualizar_dados_bancarios': responses.api_atualizar_dados_bancarios[500],
       'api_midias': responses.api_midias[200]
     },
+    '55840480037': {
+      'api_buscaCliente': responses.api_buscaCliente[200].naoCliente,
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_politicas_de_restricoes': responses.api_politicas_de_restricoes[400].PossuiPropostaAberturaContaIntegrada,
+      'api_consultar_propostas': responses.api_consultar_propostas[200].AberturaConta.MaisDeUmaProposta
+    },
     '47770238005': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntista,
       'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
