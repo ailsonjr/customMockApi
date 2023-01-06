@@ -4,6 +4,12 @@ async function custom_cpfs_mockados(params) {
   let result;
 
   const responseCpfs = {
+    '36314956846': {
+      'api_consultar_propostas': responses.api_consultar_propostas[200].CreditoPessoal.Cancelada.ContaDigital
+    },
+    '50180261037': {
+      'api_buscaCliente': responses.api_buscaCliente[500]
+    },
     '20667028030': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
       'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,

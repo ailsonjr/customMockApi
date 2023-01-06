@@ -1804,14 +1804,14 @@ async function custom_mock_apis(params) {
                     "valorLiberado": 0,
                     "numeroOperacao": 570951319,
                     "dataBaseCalculo": "14/09/2022",
-                    "descricaoStatus": "Aprovada",
+                    "descricaoStatus": "Reprovada",
                     "valorEmprestimo": 7415,
                     "valorFinanciado": 7627.85,
                     "modalidadeCredito": "CreditoPessoal",
                     "quantidadeParcelas": 84,
                     "dataHoraInicioConversa": "14/09/2022",
                     "mensagemAmigavelCliente": null,
-                    "modalidadeCreditoDescricao": "Renovação"
+                    "modalidadeCreditoDescricao": "Credito Pessoal"
                   }
                 ]
               }
