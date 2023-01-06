@@ -1901,6 +1901,49 @@ async function custom_mock_apis(params) {
                 }
               ]
             }
+          },
+          "MaisDeUmaProposta": {
+            "code": 200,
+            "body": {
+              "statusCode": 200,
+              "response": [
+                {
+                  "status": "EmAndamento",
+                  "cliente": {
+                    "nome": "Steve Jobs",
+                    "email": null,
+                    "dddCelular": 99,
+                    "valorRenda": null,
+                    "classificacao": "Novo",
+                    "numeroCelular": 999999999
+                  },
+                  "contaBancaria": null,
+                  "numeroOperacao": 570951319,
+                  "descricaoStatus": "Em Andamento",
+                  "modalidadeCredito": "AberturaConta",
+                  "modalidadeCreditoDescricao": "Abertura de conta",
+                  "dataHoraInicioConversa": "14/09/2022",
+                  "mensagemAmigavelCliente": "Essa fraseologia vem da API do cliente.",
+                },
+                {
+                  "status": "Cancelada",
+                  "cliente": {
+                    "nome": "Steve Jobs",
+                    "email": null,
+                    "dddCelular": 99,
+                    "valorRenda": null,
+                    "classificacao": "Novo",
+                    "numeroCelular": 999999999
+                  },
+                  "contaBancaria": null,
+                  "numeroOperacao": 570951319,
+                  "descricaoStatus": "Reprovada",
+                  "modalidadeCredito": "AberturaConta",
+                  "modalidadeCreditoDescricao": "Abertura de conta",
+                  "dataHoraInicioConversa": "14/09/2022"
+                }
+              ]
+            }
           }
         }
       },
