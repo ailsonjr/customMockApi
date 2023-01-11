@@ -4,6 +4,34 @@ async function custom_cpfs_mockados(params) {
   let result;
 
   const responseCpfs = {
+    '43434460004':{
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].NaoExisteContratosAptos,
+    },
+    '51422253090':{
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ChaveNaoMapeada,
+    },
+    '35233761068':{
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteSemProduto,
+    },
+    '12870255012':{
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[200],
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_obter_token_IN100': responses.api_obter_token_IN100[200],
+      'api_simulacao_renovacao': responses.api_simulacao_renovacao[200],
+      'api_consultar_propostas': responses.api_consultar_propostas[400].PropostaNaoEncontrada,
+    },
     '36314956846': {
       'api_consultar_propostas': responses.api_consultar_propostas[200].CreditoPessoal.Cancelada.ContaDigital
     },
@@ -746,4 +774,3 @@ async function custom_cpfs_mockados(params) {
 }
 
 module.exports = custom_cpfs_mockados
-
