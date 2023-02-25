@@ -1,5 +1,127 @@
 async function custom_mock_apis(params) {
   return {
+    "api_comunicacao_conclui_oferta":{
+      "200":{
+        "code": 200,
+        "body": {
+          "response": "Informação de contratação gravada com sucesso.",
+          "statusCode": 200
+      },
+      }
+    },
+    "api_registrar_aceite":{
+      "200": {
+        "code": 200,
+        "body": {
+          "response": "Aceite registrado com sucesso.",
+          "statusCode": 200
+        },
+      }
+    },
+    "api_obter_proposta":{
+      "200": {
+        "code": 200,
+        "body": {
+          "response": {
+              "id": "f9c19af8-e3e6-4763-b06a-58827544021b",
+              "status": "EmAndamento",
+              "cliente": {
+                  "cpf": 27682221860,
+                  "nome": "Altair Aires",
+                  "email": null,
+                  "dddCelular": 13,
+                  "valorRenda": null,
+                  "classificacao": "Novo",
+                  "numeroCelular": 996430166,
+                  "numeroBeneficio": 1749643623
+              },
+              "parcelas": [],
+              "valorIof": "R$ 35,07",
+              "valorTac": "R$ 0,00",
+              "valorTcc": 0,
+              "empresaId": 2,
+              "liberacao": {
+                  "banco": 389,
+                  "conta": "1019843",
+                  "numero": 0,
+                  "agencia": 332,
+                  "nomeBanco": "BANCO MERCANTIL DO BRASIL S.A.",
+                  "contaDigito": 7,
+                  "nomeAgencia": null,
+                  "dataLiberacao": null,
+                  "tipoLiberacao": "CreditoCliente",
+                  "formaLiberacao": "DocTedContaCorrente",
+                  "tipoFavorecido": "Cliente",
+                  "valorLiberacao": "R$ 1.020,90",
+                  "tipoContaBancaria": "Corrente",
+                  "tipoOriginacaoConta": null,
+                  "descricaoTipoLiberacao": "Crédito cliente",
+                  "descricaoFormaLiberacao": "Doc ted conta corrente",
+                  "descricaoTipoFavorecido": "Cliente",
+                  "descricaoTipoOriginacaoConta": "",
+                  "descricaoTipoContaBancariaDto": "Corrente"
+              },
+              "produtoId": 372,
+              "convenioId": 1,
+              "taxaCetAno": "28.63",
+              "taxaCetMes": "2.12",
+              "dataCadastro": "24/02/2023",
+              "taxaJurosAno": "28.32",
+              "taxaJurosMes": "2.10",
+              "valorParcela": "R$ 124,82",
+              "valorLiberado": "R$ 0,00",
+              "liberacaoBanco": {
+                  "banco": 0,
+                  "conta": "",
+                  "numero": 2,
+                  "agencia": 0,
+                  "nomeBanco": null,
+                  "contaDigito": null,
+                  "nomeAgencia": null,
+                  "dataLiberacao": null,
+                  "tipoLiberacao": "CreditoInternoMB",
+                  "formaLiberacao": 0,
+                  "tipoFavorecido": "Instituicao",
+                  "valorLiberacao": "R$ 3.803,10",
+                  "tipoContaBancaria": 0,
+                  "tipoOriginacaoConta": null,
+                  "descricaoTipoLiberacao": "Crédito interno MB",
+                  "descricaoFormaLiberacao": "",
+                  "descricaoTipoFavorecido": "Instituição",
+                  "descricaoTipoOriginacaoConta": "",
+                  "descricaoTipoContaBancariaDto": ""
+              },
+              "numeroOperacao": 571939207,
+              "dataBaseCalculo": "24/02/2023",
+              "descricaoStatus": "Em Andamento",
+              "valorEmprestimo": "R$ 4.824,00",
+              "valorFinanciado": "R$ 4.859,07",
+              "codigoProdutoCcn": 372,
+              "modalidadeCredito": "Renovacao",
+              "cnpjCorrespondente": 17184037000110,
+              "contratosRenovados": [
+                  {
+                      "saldoDevedor": "R$ 3.803,10",
+                      "valorParcela": "R$ 98,14",
+                      "numeroContrato": "803908302",
+                      "codigoProdutoCcn": 372,
+                      "quantidadeParcelas": 65,
+                      "quantidadeParcelasTotal": 84
+                  }
+              ],
+              "quantidadeParcelas": 84,
+              "dataUltimoVencimento": "10/03/2030",
+              "dataHoraInicioConversa": "24/02/2023",
+              "dataPrimeiroVencimento": "10/04/2023",
+              "quantidadeParcelasTotal": 0,
+              "descricaoModalidadeCredito": "Renovação",
+              "solicitacaoConsultaIN100Id": 0,
+              "mensagemAmigavelSituacaoProposta": null
+          },
+          "statusCode": 200
+      },
+      }
+    },
     "api_simulacaoRenovacao": {
       "200": {
         "code": 200,
@@ -1989,6 +2111,37 @@ async function custom_mock_apis(params) {
           }
         },
         "Renovacao":{
+          "Integrada": {
+            "code": 200,
+            "body": {
+              "statusCode": 200,
+              "response": [
+                {
+                  "status": "Integrada",
+                  "cliente": {
+                    "nome": "Steve Jobs",
+                    "email": null,
+                    "dddCelular": 99,
+                    "valorRenda": null,
+                    "classificacao": "Novo",
+                    "numeroCelular": 999999999
+                  },
+                  "contaBancaria": {
+                    "conta": "1036315",
+                    "agencia": 327,
+                    "contaDigito": 5,
+                    "tipoContaBancaria": "Corrente",
+                    "tipoOriginacaoConta": "ContaDigital"
+                  },
+                  "numeroOperacao": 570951319,
+                  "descricaoStatus": "Aprovada",
+                  "modalidadeCredito": "Renovacao",
+                  "modalidadeCreditoDescricao": "Renovacao",
+                  "dataHoraInicioConversa": "14/09/2022"
+                }
+              ]
+            }
+          },
           "EmAndamento": {
             "code": 200,
             "body": {
@@ -2011,6 +2164,74 @@ async function custom_mock_apis(params) {
                   "modalidadeCreditoDescricao": "Renovacao",
                   "dataHoraInicioConversa": "14/09/2022",
                   "mensagemAmigavelCliente": "Essa fraseologia vem da API do cliente.",
+                }
+              ]
+            }
+          },
+          "Cancelada": {
+            "code": 200,
+            "body": {
+              "statusCode": 200,
+              "response": [
+                {
+                  "status": "Cancelada",
+                  "cliente": {
+                    "nome": "Steve Jobs",
+                    "email": null,
+                    "dddCelular": 99,
+                    "valorRenda": null,
+                    "classificacao": "Novo",
+                    "numeroCelular": 999999999
+                  },
+                  "contaBancaria": null,
+                  "numeroOperacao": 570951319,
+                  "descricaoStatus": "Reprovada",
+                  "modalidadeCredito": "Renovacao",
+                  "modalidadeCreditoDescricao": "Renovacao",
+                  "dataHoraInicioConversa": "14/09/2022"
+                }
+              ]
+            }
+          },
+          "MaisDeUmaProposta": {
+            "code": 200,
+            "body": {
+              "statusCode": 200,
+              "response": [
+                {
+                  "status": "EmAndamento",
+                  "cliente": {
+                    "nome": "Steve Jobs",
+                    "email": null,
+                    "dddCelular": 99,
+                    "valorRenda": null,
+                    "classificacao": "Novo",
+                    "numeroCelular": 999999999
+                  },
+                  "contaBancaria": null,
+                  "numeroOperacao": 570951319,
+                  "descricaoStatus": "Em Andamento",
+                  "modalidadeCredito": "Renovacao",
+                  "modalidadeCreditoDescricao": "Renovacao",
+                  "dataHoraInicioConversa": "14/09/2022",
+                  "mensagemAmigavelCliente": "Essa fraseologia vem da API do cliente.",
+                },
+                {
+                  "status": "Cancelada",
+                  "cliente": {
+                    "nome": "Steve Jobs",
+                    "email": null,
+                    "dddCelular": 99,
+                    "valorRenda": null,
+                    "classificacao": "Novo",
+                    "numeroCelular": 999999999
+                  },
+                  "contaBancaria": null,
+                  "numeroOperacao": 570951319,
+                  "descricaoStatus": "Reprovada",
+                  "modalidadeCredito": "Renovacao",
+                  "modalidadeCreditoDescricao": "Renovacao",
+                  "dataHoraInicioConversa": "14/09/2022"
                 }
               ]
             }
