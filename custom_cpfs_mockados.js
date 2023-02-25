@@ -4,11 +4,19 @@ async function custom_cpfs_mockados(params) {
   let result;
 
   const responseCpfs = {
+    '36839438074':{
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
+      'api_consultar_propostas': responses.api_consultar_propostas[200].Renovacao.EmAndamento
+
+    },
     '43434460004':{
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
       'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
       'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].NaoExisteContratosAptos,
+      'api_consulta_status_proposta_FGTS': responses.api_consulta_status_proposta_FGTS[200].com_proposta_ativa,
     },
     '51422253090':{
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
