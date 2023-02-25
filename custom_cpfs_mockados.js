@@ -4,25 +4,25 @@ async function custom_cpfs_mockados(params) {
   let result;
 
   const responseCpfs = {
-    '43434460004':{
+    '43434460004': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
       'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
       'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].NaoExisteContratosAptos,
     },
-    '51422253090':{
+    '51422253090': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
       'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
       'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ChaveNaoMapeada,
     },
-    '35233761068':{
+    '35233761068': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
       'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
       'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[400].ClienteSemProduto,
     },
-    '12870255012':{
+    '12870255012': {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
       'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
@@ -758,6 +758,24 @@ async function custom_cpfs_mockados(params) {
       'api_finalizar_proposta_operacao': responses.api_finalizar_proposta_operacao[200],
       'api_consulta_saque_loterica': responses.api_consulta_saque_loterica[200].aprovada,
       'api_obter_codigo_validacao': responses.api_obter_codigo_validacao[200]
+    },
+    '9986403600': {
+      'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
+      'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
+      'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[200],
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_proposta_credito': responses.api_proposta_credito[200],
+      'api_palavra_chave': responses.api_palavra_chave[200],
+      'api_validar_midia': responses.api_validar_midia[200],
+      'api_finalizar_proposta_operacao': responses.api_finalizar_proposta_operacao[200],
+      'api_atualizar_prospect_FGTS': responses.api_atualizar_prospect_FGTS[200],
+      'api_comprovante_contratacao_FGTS': responses.api_comprovante_contratacao_FGTS[200],
+      'api_consulta_status_proposta_FGTS': responses.api_consulta_status_proposta_FGTS[200].com_proposta_ativa,
+      'api_gravar_proposta_FGTS': responses.api_gravar_proposta_FGTS[200],
+      'api_pix_randomico': responses.api_pix_randomico[200],
+      'api_receita_federal': responses.api_receita_federal[200],
+      'api_simulacao_fgts': responses.api_simulacao_fgts[200].com_taxa,
+      'api_validar_pix_randomico': responses.api_validar_pix_randomico[200],
     },
   }
 
