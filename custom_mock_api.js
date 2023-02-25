@@ -1,32 +1,32 @@
 async function custom_mock_apis(params) {
   return {
-    "api_simulacaoRenovacao":{
-      "200":{
+    "api_simulacaoRenovacao": {
+      "200": {
         "code": 200,
-        "body":{
+        "body": {
           "statusCode": 200,
           "response": {
-              "valorLiquidado": "24.626,43",
-              "valorTroco": "2.206,45",
-              "valorLimitePreAprovadoProduto": "26.832,88",
-              "quantidadeParcela": 84,
-              "valorParcela": "691,70",
-              "contratosRenovados": [
-                  {
-                      "numeroContrato": 803824515
-                  },
-                  {
-                      "numeroContrato": 804037916
-                  }
-              ],
-              "descricaoEspecieBeneficio": "Pensao Por Morte",
-              "valorMinimoParcelas": 78,
-              "valorMaximoParcelas": 84,
-              "valorMaximoTroco": "2.206,45",
-              "valorMinimoTroco": "150,00",
-              "contratosRenovadosFormatados": "803824515, 804037916"
+            "valorLiquidado": "24.626,43",
+            "valorTroco": "2.206,45",
+            "valorLimitePreAprovadoProduto": "26.832,88",
+            "quantidadeParcela": 84,
+            "valorParcela": "691,70",
+            "contratosRenovados": [
+              {
+                "numeroContrato": 803824515
+              },
+              {
+                "numeroContrato": 804037916
+              }
+            ],
+            "descricaoEspecieBeneficio": "Pensao Por Morte",
+            "valorMinimoParcelas": 78,
+            "valorMaximoParcelas": 84,
+            "valorMaximoTroco": "2.206,45",
+            "valorMinimoTroco": "150,00",
+            "contratosRenovadosFormatados": "803824515, 804037916"
           },
-      }
+        }
       }
     },
     "api_obter_codigo_validacao": {
@@ -1429,6 +1429,19 @@ async function custom_mock_apis(params) {
       "500": {
         "body": {
           "message": "Não foi possível executar a função Atualizar Prospect FGTS",
+          "statusCode": 500
+        },
+        "code": 500
+      }
+    },
+    "api_comprovante_contratacao_FGTS": {
+      "200": {
+        "statusCode": 200,
+        "response": "https://altuclients.s3.sa-east-1.amazonaws.com/mercantil/comprovanteFGTS/comprovante_contratacao_fgts_570000278.pdf"
+      },
+      "500": {
+        "body": {
+          "message": "Não foi possível executar a função Comprovante de Contratação FGTS",
           "statusCode": 500
         },
         "code": 500
