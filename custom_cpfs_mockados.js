@@ -8,7 +8,17 @@ async function custom_cpfs_mockados(params) {
       'api_buscaCliente': responses.api_buscaCliente[200].cliente.correntistaBeneficiario,
       'api_permissoes_menu': responses.api_permissoes_menu[200].saque_loterica,
       'api_comunicacao_procura_oferta_renovacao': responses.api_comunicacao_procura_oferta_renovacao[400].OfertaBloqueada,
-      'api_consultar_propostas': responses.api_consultar_propostas[200].Renovacao.EmAndamento
+      'api_consultar_propostas': responses.api_consultar_propostas[200].Renovacao.EmAndamento, //APIs de Renovacao
+      'api_obter_contratos_aptos_renovar': responses.api_obter_contratos_aptos_renovar[200],
+      'api_gerar_prospect': responses.api_gerar_prospect[200],
+      'api_obter_token_IN100': responses.api_obter_token_IN100[200],
+      'api_simulacao_renovacao': responses.api_simulacao_renovacao[200],
+      'api_cancelar_prospect': responses.api_cancelar_prospect[200],
+      'api_proposta_credito': responses.api_proposta_credito[200],
+      'api_finalizar_operacao_operacao': responses.api_finalizar_proposta_operacao[200],
+      'api_tipo_documento': responses.api_tipo_documento[200],
+      'api_comunicacao_conclui_oferta': responses.api_comunicacao_conclui_oferta[200],
+      'api_obter_proposta': responses.api_obter_proposta[200],
 
     },
     '43434460004': {
